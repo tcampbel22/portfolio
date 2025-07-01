@@ -1,28 +1,57 @@
-import React  from 'react'
+import React, { useEffect, useState }  from 'react'
+import { Link } from "react-router-dom";
 
 type HeaderButtonProps = {
 	text: string;
+	link: string;
+	image?: string;
+	internal?: boolean;
 }
 
-const HeaderButton = ({text}: HeaderButtonProps) => {
-	return (
-		<button className='mb-4 bg-gray-900 dark:bg-gray-600
-			shadow-sm shadow-gray-300 rounded hover:bg-pink-600
-			py-2 px-4 transform transition-all duration-300 hover:scale-110 relative hover-shadow-xl ease-in-out'> 
-			{text}</button>
+const HeaderButton = ({ text, link, image, internal }: HeaderButtonProps) => {
+	return !internal ? (
+			<a  href={link} 
+				title={text}
+				style={{ backgroundImage: image ? `url(${image})` : undefined }} 
+				className={`inline-block mb-4 w-16 h-16 bg-cover bg-white outline-black dark:outline-none dark:bg-gray-950 rounded-md 
+				 transform transition-all duration-300 hover:scale-110 relative hover-shadow-sm ease-in-out`}
+				>
+				<span className="sr-only">{text}</span>
+			</a> ) 
+			: ( <Link to={link}>
+				</Link>
 	);
 };
 
 export const Header:React.FC = () => {
+	const [darkMode, setDarkMode] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		setDarkMode(mediaQuery.matches);
+		const handleLightMode = (event: MediaQueryListEvent) => {
+			setDarkMode(event.matches);
+		};
+		mediaQuery.addEventListener('change', handleLightMode);
+		return () => {
+            mediaQuery.removeEventListener('change', handleLightMode);
+        };
+	}, []);
+
 	return (
-			<div className='flex flex-col md:flex-row md:justify-between items-center text-xl mt-[2vh] m-5 p-4 dark:text-white font-bold'>
-				<h1 className='text-3xl font-bold py-2 px-4 mb-4'>Timothy Campbell</h1>
+			<div className='flex flex-col md:flex-row md:justify-between items-center text-xl mt-[4vh] m-3 p-4 dark:text-white font-bold'>
+				<div>
+					<h1 className='text-5xl font-bold px-4 mb-2 text-center md:text-left'>Timothy Campbell</h1>
+					<h2 className='text-1xl font-bold px-4 mb-4 m-2 text-center md:text-left'>tcampbel22@gmail.com</h2>
+				</div>
+
 				<div className='space-x-4'>
-					<HeaderButton text="About"/>
-					<HeaderButton text="Projects"/>
-					<HeaderButton text="Resume"/>
+					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/github-mark.png' : '/github-mark-white.png'}/>
+					<HeaderButton text="LinkedIn" link="https://www.linkedin.com/in/tim-campbell-49b40880" image={!darkMode ? '/LI-Blue.png' : '/LI-White.png'}/>
+					<HeaderButton text="Resume" link="/resume" image={!darkMode ? '/cv-black.png' : '/cv-colour.png'}/>
 				</div>
 			</div>
+
 	);
 };
 
