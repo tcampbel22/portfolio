@@ -20,7 +20,9 @@ const HeaderButton = ({ text, link, image, internal }: HeaderButtonProps) => {
 				>
 				<span className="sr-only">{text}</span>
 			</a> ) 
-			: ( <Link to={link}
+			: ( <Link 
+				to={link}
+				title={text}
 				style={{ backgroundImage: image ? `url(${image})` : undefined }} 
 				className={`inline-block mb-4 w-16 h-16 bg-cover bg-white outline-black dark:outline-none dark:bg-gray-950 rounded-md 
 				 transform transition-all duration-300 hover:scale-110 relative hover-shadow-sm ease-in-out`}
@@ -53,8 +55,8 @@ export const Header:React.FC = () => {
 
 				<div className='space-x-4'>
 					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/portfolio_page/github-mark.png' : '/portfolio_page/github-mark-white.png'}/>
-					<HeaderButton text="LinkedIn" link="https://www.linkedin.com/in/tim-campbell-49b40880?trk=profile-badge" image={!darkMode ? '/portfolio_page/LI-Blue.png' : '/portfolio_page/LI-White.png'}/>
-					<HeaderButton text="Resume" link="/resume" image={!darkMode ? '/portfolio_page/cv-black.png' : '/portfolio_page/cv-colour.png'} internal={true}/>
+					<HeaderButton text="LinkedIn - Requires log-in" link="https://www.linkedin.com/in/tim-campbell-49b40880" image={!darkMode ? '/portfolio_page/LI-Blue.png' : '/portfolio_page/LI-White.png'}/>
+					<HeaderButton text="My Resume" link="/resume" image={!darkMode ? '/portfolio_page/cv-black.png' : '/portfolio_page/cv-colour.png'} internal={true}/>
 				</div>
 			</div>
 
