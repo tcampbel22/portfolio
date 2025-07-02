@@ -47,16 +47,16 @@ export const Header:React.FC = () => {
 	}, []);
 
 	return (
-			<div className='flex flex-col md:flex-row md:justify-between items-center text-xl mt-[4vh] m-3 p-4 dark:text-white font-bold'>
+			<div className='flex flex-col md:flex-row md:justify-between items-center text-xl pt-[5vh] p-4 dark:text-white font-bold'>
 				<div>
 					<h1 className='text-5xl font-bold px-4 mb-2 text-center md:text-left'>Timothy Campbell</h1>
 					<h2 className='text-1xl font-bold px-4 mb-4 m-2 text-center md:text-left'>tcampbel22@gmail.com</h2>
 				</div>
 
 				<div className='space-x-4'>
-					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/portfolio_page/github-mark.png' : '/portfolio_page/github-mark-white.png'}/>
-					<HeaderButton text="LinkedIn - Requires log-in" link="https://www.linkedin.com/in/tim-campbell-49b40880" image={!darkMode ? '/portfolio_page/LI-Blue.png' : '/portfolio_page/LI-White.png'}/>
-					<HeaderButton text="My Resume" link="/resume" image={!darkMode ? '/portfolio_page/cv-black.png' : '/portfolio_page/cv-colour.png'} internal={true}/>
+					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/github-mark.png' : '/github-mark-white.png'}/>
+					<HeaderButton text="LinkedIn - Requires log-in" link="https://www.linkedin.com/in/tim-campbell-49b40880" image={!darkMode ? '/LI-Blue.png' : '/LI-White.png'}/>
+					<HeaderButton text="My Resume" link="/resume" image={!darkMode ? '/cv-black.png' : '/cv-colour.png'} internal={true}/>
 				</div>
 			</div>
 

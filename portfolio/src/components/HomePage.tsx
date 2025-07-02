@@ -6,7 +6,7 @@ import { Banner } from "./Banner";
 
 export const HomePage:React.FC = () => {
 	return (
-		<div className=" md:max-w-screen-xl mx-auto font-mono">
+		<div className="md:max-w-screen-xl mx-auto font-mono">
 			<Header/>
 			<div className='px-10 mx-10 h-[2px] my-10 mb-5 bg-black dark:bg-white'></div>
 			<About/>

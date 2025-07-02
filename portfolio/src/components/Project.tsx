@@ -11,9 +11,9 @@ export const Project:React.FC<ProjectProps> = ({ projectName, link, image }) => 
 				rel="noopener noreferrer" 
 				style={{backgroundImage: `url(${image})`}}
 				className='bg-cover bg-center w-full h-48 md:h-96
-					bg-gray-200 shadow-md mb-1 text-xl md:text-4xl
-					font-bold text-gray-100 text-shadow dark:text-gray-100
-					transform hover:scale-105 transition-all duration-300 ease-in-out
+					bg-gray-200 shadow-md shadow-black mb-1 text-xl md:text-4xl
+					font-bold text-gray-100 dark:text-gray-100
+					transform hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out
 					flex items-center justify-center'
 					>
 			</a>
