@@ -18,7 +18,11 @@ const HeaderButton = ({ text, link, image, internal }: HeaderButtonProps) => {
 				>
 				<span className="sr-only">{text}</span>
 			</a> ) 
-			: ( <Link to={link}>
+			: ( <Link to={link}
+				style={{ backgroundImage: image ? `url(${image})` : undefined }} 
+				className={`inline-block mb-4 w-16 h-16 bg-cover bg-white outline-black dark:outline-none dark:bg-gray-950 rounded-md 
+				 transform transition-all duration-300 hover:scale-110 relative hover-shadow-sm ease-in-out`}
+				>
 				</Link>
 	);
 };
