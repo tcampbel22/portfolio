@@ -46,7 +46,7 @@ export const Header:React.FC = () => {
 				</div>
 
 				<div className='space-x-4'>
-					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/github-mark.png' : '/github-mark-white.png'}/>
+					<HeaderButton text="Github" link="https://github.com/tcampbel22" image={!darkMode ? '/portfolio_page/github-mark.png' : '/portfolio_page/github-mark-white.png'}/>
 					<HeaderButton text="LinkedIn" link="https://www.linkedin.com/in/tim-campbell-49b40880" image={!darkMode ? '/LI-Blue.png' : '/LI-White.png'}/>
 					<HeaderButton text="Resume" link="/resume" image={!darkMode ? '/cv-black.png' : '/cv-colour.png'}/>
 				</div>
