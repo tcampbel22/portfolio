@@ -9,7 +9,7 @@ export const AppRoutes:React.FC = () => {
 		<Routes>
 			<Route path="/resume" element={<Resume />}/>
 			<Route path="/projects" element={<AllProjects />}/>
-			<Route path="/" element={<HomePage />}/>
+			<Route path="/portfolio_page/" element={<HomePage />}/>
 		</Routes>
 	);
 };
