@@ -4,8 +4,6 @@ import { HomePage } from "./HomePage";
 import { Resume } from "./Resume";
 import { AllProjects } from "./AllProjects";
 
-
-
 export const AppRoutes:React.FC = () => {
 	return (
 		<Routes>

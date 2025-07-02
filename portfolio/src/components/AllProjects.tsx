@@ -1,48 +1,27 @@
 import React from 'react'
 import { Footer } from './Footer';
-
-type ProjectProps = {
-	projectName: string;
-	link: string;
-	image?: string;
-}
-const Project = ({ projectName, link, image }: ProjectProps) => {
-	return (
-		<a 	href={link} 
-			target="_blank"
-            rel="noopener noreferrer" 
-			style={{backgroundImage: `url(${image})`}}
-			className='bg-cover bg-center w-full h-48 md:h-96
-				bg-gray-700 shadow-md mb-1 text-xl md:text-4xl
-				font-bold text-gray-100
-				transform hover:scale-105 transition-all duration-300 ease-in-out
-				flex items-center justify-center'
-				>
-				<span className="relative z-10 absolute inset-0 bg-gray-600/60 rounded p-1 backdrop-blur-sm ">{projectName}</span>
-
-		</a>
-	);
-};
+import { Project } from './Project';
 
 export const AllProjects:React.FC = ()  => {
 	return (
 		<div className='mt-10 mb-10 pb-10'>
 			<h1 className='dark:text-white text-center font-bold text-3xl md:text-5xl mb-5'>Projects</h1>
 			<div className='grid grid-cols-1 lg:grid-cols-3 gap-10 p-5 m-5 mx-10'>
-				<Project projectName="Shell interpreter" link="https://github.com/tcampbel22/42_hive_minishell" image="/shell.gif"/>
-				<Project projectName="2.5D raycasting game" link="https://github.com/tcampbel22/cub3d" image="/duck.gif"/>
-				<Project projectName="2D Platformer" link="https://github.com/tcampbel22/42_hive_so_long" image="/dino.gif"/>
-				<Project projectName="HTTP 1.1 server" link="https://github.com/tcampbel22/42_webserv" image="server.gif"/>
-				<Project projectName="Custom C library" link="https://github.com/tcampbel22/42_hive_libft"/>
-				<Project projectName="Dining philosophers" link="https://github.com/tcampbel22/42_philosophers"/>
-				<Project projectName="Sorting Algorithm" link="https://github.com/tcampbel22/42_hive_push_swap"/>
-				<Project projectName="Pong web app" link="https://github.com/tcampbel22/transcendence"/>
-				<Project projectName="Custom printf" link="https://github.com/tcampbel22/42_hive_ft_printf"/>
 				<Project projectName="Meal planning app" link=""/>
-				<Project projectName="Exercise tracker app" link="https://github.com/tcampbel22/Exercise-Tracker-Dashboard"/>
-				<Project projectName="Card shuffler app" link="https://tarot-tim-campbell.onrender.com"/>
+				<Project projectName="Shell interpreter" link="https://github.com/tcampbel22/custom_shell_interpreter" image="/shell.gif"/>
+				<Project projectName="2.5D raycasting game" link="https://github.com/tcampbel22/cub3d" image="/duck.gif"/>
+				<Project projectName="Arcade-style collectathon" link="https://github.com/tcampbel22/arcade_style_collectathon_game" image="/dino.gif"/>
+				<Project projectName="Card shuffler app" link="https://tarot-tim-campbell.onrender.com" image="cards.gif"/>
+				<Project projectName="HTTP 1.1 server" link="https://github.com/tcampbel22/https://github.com/tcampbel22/HTTP_1.1_server" image="/server.gif"/>
+				<Project projectName="Custom printf" link="https://github.com/tcampbel22/custom_printf" image="/printf.png"/>
+				<Project projectName="Custom C library" link="https://github.com/tcampbel22/custom_C_library" image='/c.png'/>
+				<Project projectName="Pong web app" link="https://github.com/tcampbel22/transcendence"/>
+				<Project projectName="Dining philosophers" link="https://github.com/tcampbel22/dining_philosophers" image='/philo.png'/>
+				<Project projectName="Turk sorting algorithm" link="https://github.com/tcampbel22/turk_sorting_algorithm" image="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Racknitz_-_The_Turk_3.jpg/1024px-Racknitz_-_The_Turk_3.jpg"/>
+				<Project projectName="Exercise tracker dashboard" link="https://github.com/tcampbel22/Exercise-Tracker-Dashboard" image="/dash.png"/>
 			</div>
 			<Footer/>
 		</div>
 	);
 };
+

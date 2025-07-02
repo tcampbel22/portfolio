@@ -5,7 +5,7 @@ export const About:React.FC = () => {
 	return (
 		<div className='flex flex-col items-center max-w-6xl p-2 mx-auto'>
 			
-			<h1 className='dark:text-white font-bold text-3xl mb-4'>About</h1>
+			<h1 className='dark:text-white font-bold text-3xl md:text-5xl mb-4'>About</h1>
 			<img src={timImg} className='max-w-80 max-h-80 m-3 rounded-full'/>
 			<p className='dark:text-white md:text-left text-xl text-center px-4 mt-5 w-full'>
 				I'm a software developer with hands-on experience in full-stack development 
