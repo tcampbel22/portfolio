@@ -1,0 +1,66 @@
+export const ProjectList = [
+	{	name: "Shell interpreter", 
+		stack: "C", 
+		link: "https://github.com/tcampbel22/custom_shell_interpreter", 
+		image: "/shell.gif"},
+	{
+		name: "Retro-style raycasting game",
+		stack: "C, OpenGL",
+		link: "https://github.com/tcampbel22/cub3d",
+		image: "/duck.gif",
+	  },
+	  {
+		name: "Arcade-style collecta-thon",
+		stack: "C, OpenGL",
+		link: "https://github.com/tcampbel22/arcade_style_collectathon_game",
+		image: "/dino.gif",
+	},
+	{
+		name: "Pong web app",
+		stack: "Typescript, Fastify, React",
+		link: "https://github.com/tcampbel22/transcendence",
+		image: "/Pong.png",
+	},
+	{
+		name: "Card shuffler app",
+		stack: "ThreeJS, Tailwind, React",
+		link: "https://tarot-tim-campbell.onrender.com",
+		image: "/cards.gif",
+	},
+	{
+		name: "HTTP 1.1 server",
+		stack: "C++, Python",
+		link: "https://github.com/tcampbel22/HTTP_1.1_server",
+		image: "/server.gif",
+	},
+	{
+		name: "Custom printf",
+		stack: "C",
+		link: "https://github.com/tcampbel22/custom_printf",
+		image: "/printf.png",
+	},
+	{
+		name: "Custom stdlib",
+		stack: "C",
+		link: "https://github.com/tcampbel22/custom_C_library",
+		image: "/c.png",
+	},
+	{
+		name: "Dining philosophers",
+		stack: "C",
+		link: "https://github.com/tcampbel22/dining_philosophers",
+		image: "/philo.png",
+	},
+	{
+		name: "Turk sorting algorithm",
+		stack: "C",
+		link: "https://github.com/tcampbel22/turk_sorting_algorithm",
+		image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Racknitz_-_The_Turk_3.jpg/1024px-Racknitz_-_The_Turk_3.jpg",
+	},
+	{
+		name: "Exercise tracker dashboard",
+		stack: "Google Apps Script, GCP",
+		link: "https://github.com/tcampbel22/Exercise-Tracker-Dashboard",
+		image: "/dash.png",
+	},
+];
