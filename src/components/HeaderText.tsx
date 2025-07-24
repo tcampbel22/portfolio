@@ -9,7 +9,7 @@ export const HeaderTitle:React.FC<HeaderProps> = ({ text }) => {
 
 export const HeaderSmall:React.FC<HeaderProps> = ({ text }) => {
 	return (
-		<h1 className="dark:text-gray-100 font-bold text-xl md:text-2xl text-center md:text-left pb-4">{text}</h1>
+		<h1 className="dark:text-gray-100 font-bold text-xl md:text-3xl text-center md:text-left pb-4">{text}</h1>
 	)
 };
 
@@ -18,6 +18,12 @@ export const HeaderCenter:React.FC<HeaderProps> = ({ text }) => {
 		<h1 className="dark:text-gray-100 font-bold text-xl md:text-3xl text-center pb-4">{text}</h1>
 	)
 };
+
+export const HeaderCenterLarge:React.FC<HeaderProps> = ({ text }) => {
+	return (
+		<h1 className='text-center font-bold text-3xl md:text-4xl dark:text-gray-100'>{text}</h1>
+	)
+}
 
 export const HeaderSub:React.FC<HeaderProps> = ({ text }) => {
 	return (

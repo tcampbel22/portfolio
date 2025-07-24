@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderCenter, HeaderMini } from "./HeaderText";
 import { Link } from "react-router-dom";
-import { Phone, Envelope, PaperPlaneTilt } from "@phosphor-icons/react"
+import { PhoneIcon, EnvelopeIcon, PaperPlaneTiltIcon } from "@phosphor-icons/react"
 import type { DarkProps } from "../types/types";
 
 export const Contact:React.FC<DarkProps> = ({ isDark }) => {
@@ -11,15 +11,15 @@ export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 			<div className="flex flex-col md:flex-row items-center md:justify-between">
 				<div className="flex flex-col">
 					<div className="flex justify-start items-center space-x-8 py-2">
-						<Phone size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
+						<PhoneIcon size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
 						<HeaderMini text="+358 45 78769676"/>
 					</div>
 					<div className="flex justify-start items-center space-x-8 py-2">
-						<Envelope size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
+						<EnvelopeIcon size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
 						<HeaderMini text="tcampbel22@gmail.com"/>
 					</div>
 					<div className="flex justify-start items-center space-x-8 py-2">
-						<PaperPlaneTilt size={64} alt="Telegram" color={isDark ? '#f6f5f4' : '#000000'}/>
+						<PaperPlaneTiltIcon size={64} alt="Telegram" color={isDark ? '#f6f5f4' : '#000000'}/>
 						<HeaderMini text="@tcampbel22"/>
 					</div>
 				</div>

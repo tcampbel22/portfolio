@@ -18,7 +18,8 @@ export const ProjectList = [
 	{
 		name: "Pong web app",
 		stack: "Typescript, Fastify, React",
-		link: "https://github.com/tcampbel22/transcendence",
+		link: "/pong",
+		// link: "https://github.com/tcampbel22/transcendence",
 		image: "/Pong.png",
 	},
 	{
