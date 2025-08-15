@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import type { NavigateButtonProps } from "../types/types";
-
+import { ArrowSquareLeftIcon } from '@phosphor-icons/react'
 
 const LineBreak:React.FC = () => {
 	return (
@@ -17,4 +17,14 @@ const NavigateButton:React.FC<NavigateButtonProps> = ({ link, text }) => {
 	);
 }
 
-export { LineBreak, NavigateButton };
+const BackButton: React.FC<NavigateButtonProps> = ({ link, text, isDark }) => {
+	return (
+		<Link 
+			to={link} 
+			title={text}
+			className={`transform hover:scale-110 transition-all duration-300 ease-in-out`}>
+			<ArrowSquareLeftIcon size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
+		</Link>	)
+}
+
+export { LineBreak, NavigateButton, BackButton };

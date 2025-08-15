@@ -11,7 +11,7 @@ export const About:React.FC = () => {
 					<HeaderSmall text="About me"/>
 					Software developer with hands-on experience in full-stack development 
 					and a strong focus on backend engineering. Before transitioning into tech, 
-					I spent over 10 years in hospitality and food-tech operations—leading launches, 
+					I spent over 10 years in hospitality and food-tech operations leading launches, 
 					managing teams, and driving projects in fast-paced startup environments.
 					Now, I bring that same energy and strategic mindset to software development. I'm passionate about 
 					backend architecture, API design, and building clean, well-tested applications. </p>

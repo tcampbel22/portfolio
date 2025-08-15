@@ -17,7 +17,7 @@ const ProjectCard:React.FC<ProjectCardProps> = ({image}) => {
 	return (
 		<div 
 			style={{backgroundImage: `url(${image})`}}
-			className='bg-cover bg-center w-full h-48 md:h-96 mb-5
+			className='bg-cover bg-no-repeat bg-center w-full h-48 md:h-96 mb-5
 					bg-gray-200 shadow-md shadow-black mb-1 rounded-md
 					font-bold text-gray-100 dark:text-gray-100
 					transform hover:scale-105 hover:shadow-sm transition-all duration-300 ease-in-out

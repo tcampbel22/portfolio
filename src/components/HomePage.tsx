@@ -5,26 +5,12 @@ import { Footer } from "./Footer"
 import { Banner } from "./Banner";
 import { LineBreak } from "./Utils";
 import { Contact } from "./Contact";
-import { useEffect, useState } from "react";
+import type { DarkProps } from "../types/types";
 
-export const HomePage:React.FC = () => {
-	const [darkMode, setDarkMode] = useState(false);
-	
-		useEffect(() => {
-			const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-			setDarkMode(mediaQuery.matches);
-			const handleLightMode = (event: MediaQueryListEvent) => {
-				setDarkMode(event.matches);
-			};
-			mediaQuery.addEventListener('change', handleLightMode);
-			return () => {
-				mediaQuery.removeEventListener('change', handleLightMode);
-			};
-		}, []);
-	
+export const HomePage:React.FC<DarkProps> = ({ isDark }) => {
 	return (
 		<div className="md:max-w-screen-xl mx-auto">
-			<Header isDark={darkMode}/>
+			<Header isDark={isDark}/>
 			<LineBreak />
 			<About/>
 			<LineBreak />
@@ -32,7 +18,7 @@ export const HomePage:React.FC = () => {
 			<LineBreak />
 			<Banner />
 			<LineBreak />
-			<Contact isDark={darkMode}/>
+			<Contact isDark={isDark}/>
 			<Footer/>
 		</div>
 	);

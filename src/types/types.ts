@@ -3,14 +3,15 @@ import type { ReactElement } from "react";
 type HeaderButtonProps = {
 	link: string;
 	internal?: boolean;
-	icon: ReactElement;
+	icon?: ReactElement;
 }
 
 type NavigateButtonProps = {
 	link: string;
-	text: string;
+	text?: string;
 	sizeX?: number;
 	sizeY?: number;
+	isDark?: boolean;
 }
 
 type ImageProps = {
@@ -24,7 +25,7 @@ type HeaderProps = {
 }
 
 type DarkProps = {
-	isDark: boolean;
+	isDark?: boolean;
 }
 
 type BannerProps = {

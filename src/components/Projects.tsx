@@ -6,7 +6,7 @@ import { HeaderCenter } from './HeaderText';
 
 export const Projects:React.FC = ()  => {
 	return (
-		<div className='py-8'>
+		<div className='py-8 h-full w-full'>
 			<HeaderCenter text='Interactive Projects'/>
 			<div className='grid grid-cols-1 mx-10 md:mx-0 md:justify-items-around md:grid-cols-2 gap-10 mt-10 py-2'>
 				{ProjectList.map((p, idx) => 

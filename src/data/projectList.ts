@@ -1,7 +1,8 @@
 export const ProjectList = [
 	{	name: "Shell interpreter", 
 		stack: "C", 
-		link: "https://github.com/tcampbel22/custom_shell_interpreter", 
+		// link: "https://github.com/tcampbel22/custom_shell_interpreter", 
+		link: "/shell", 
 		image: "/shell.gif"},
 	{
 		name: "Retro-style raycasting game",
@@ -20,7 +21,7 @@ export const ProjectList = [
 		stack: "Typescript, Fastify, React",
 		link: "/pong",
 		// link: "https://github.com/tcampbel22/transcendence",
-		image: "/Pong.png",
+		image: "/pong.gif",
 	},
 	{
 		name: "Card shuffler app",
