@@ -5,6 +5,13 @@ export const ProjectList = [
 		link: "/shell", 
 		image: "/shell.gif"},
 	{
+		name: "Pong web app",
+		stack: "Typescript, Fastify, React",
+		link: "/pong",
+		// link: "https://github.com/tcampbel22/transcendence",
+		image: "/pong.gif",
+	},
+	{
 		name: "Retro-style raycasting game",
 		stack: "C, OpenGL",
 		link: "https://github.com/tcampbel22/cub3d",
@@ -15,13 +22,6 @@ export const ProjectList = [
 		stack: "C, OpenGL",
 		link: "https://github.com/tcampbel22/arcade_style_collectathon_game",
 		image: "/dino.gif",
-	},
-	{
-		name: "Pong web app",
-		stack: "Typescript, Fastify, React",
-		link: "/pong",
-		// link: "https://github.com/tcampbel22/transcendence",
-		image: "/pong.gif",
 	},
 	{
 		name: "Card shuffler app",

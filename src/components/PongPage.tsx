@@ -10,7 +10,7 @@ type pongButtonProps = {
 	text: string;
 }
 
-const PongButton:React.FC<pongButtonProps> = ({url, text}) => {
+export const PongButton:React.FC<pongButtonProps> = ({url, text}) => {
 	return (
 		<button className="border border-2 dark:text-gray-100 px-8 py-5 my-10 hover:scale-110 transition-all duration-200 ease-in-out">
 			<a href={url} target="_blank" rel="noopener noreferrer">

@@ -22,6 +22,7 @@ export const techStack = {
 		  alt: "C++",
 		},
 		{
+			
 		  src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
 		  title: "C",
 		  alt: "C",
