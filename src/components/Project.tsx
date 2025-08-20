@@ -1,19 +1,9 @@
 import { Link } from "react-router-dom";
 import { HeaderMini } from "./HeaderText";
+import type { ProjectProps, ProjectCardProps } from "../types/types";
 
-type ProjectProps = {
-	projectName: string;
-	link: string;
-	image?: string;
-	stack?: string;
-	isHero?: boolean;
-}
 
-type ProjectCardProps = {
-	image?: string;
-}
-
-const ProjectCard:React.FC<ProjectCardProps> = ({image}) => {
+export const ProjectCard:React.FC<ProjectCardProps> = ({image}) => {
 	return (
 		<div 
 			style={{backgroundImage: `url(${image})`}}

@@ -3,6 +3,7 @@ import { HeaderCenter, HeaderMini } from "./HeaderText";
 import { Link } from "react-router-dom";
 import { PhoneIcon, EnvelopeIcon, PaperPlaneTiltIcon } from "@phosphor-icons/react"
 import type { DarkProps } from "../types/types";
+import { MediumButton } from "./Utils";
 
 export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 	return (
@@ -34,13 +35,7 @@ export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 				</div>
 			</div>
 			<div className="flex justify-center items-center pt-8">
-				<Link 
-					to={'/resume'}
-					target="_blank" 
-					rel="noopener noreferrer"
-					className={`px-10 dark:text-white mt-5 border-2 dark:bg-gray-900 dark:hover:bg-gray-600 flex justify-center items-center space-x-8 transform transition-all duration-300 hover:scale-105 relative hover-shadow-sm ease-in-out`}>
-					<p className="p-6 text-center">Read CV</p>
-				</Link>
+				<MediumButton url="/resume" text="Read CV"/>
 			</div>
 		</div>
 	);

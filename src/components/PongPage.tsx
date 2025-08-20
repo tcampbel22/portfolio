@@ -1,24 +1,10 @@
 import React from "react"
 import { HeaderCenterLarge } from "./HeaderText"
-import { LineBreak, BackButton } from "./Utils"
+import { LineBreak, BackButton, MediumButton, ImageCard } from "./Utils"
 import { pongInfo } from "../data/pongInfo"
 import { Footer } from "./Footer"
 import type { DarkProps } from "../types/types"
-
-type pongButtonProps = {
-	url: string;
-	text: string;
-}
-
-export const PongButton:React.FC<pongButtonProps> = ({url, text}) => {
-	return (
-		<button className="border border-2 dark:text-gray-100 px-8 py-5 my-10 hover:scale-110 transition-all duration-200 ease-in-out">
-			<a href={url} target="_blank" rel="noopener noreferrer">
-			{text}
-			</a>
-		</button>
-	)
-}
+import { ProjectCard } from "./Project"
 
 
 export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
@@ -38,10 +24,10 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				The game is designed to be played between 2 people on the same keyboard. Scroll down to read more about the 
 				project and check out screenshots and the codebase.
 				
-				<PongButton	url="https://transendence.fly.dev/" text="Launch Pong" />
+				<MediumButton	url="https://transendence.fly.dev/" text="Launch Pong" />
 				<span className="text-center">***Note*** This app has a cold start, so will take a few mins to boot up</span>
 			
-			<span className="whitespace-pre-line my-6 px-4 md:px-0 py-8 text-center md:text-left">
+			<span className="whitespace-pre-line mt-6 px-4 md:px-0 py-8 text-center md:text-left">
 			The last project in the 42 curriculum, this project is to build a online web application with the classic Pong game.
 				This was group project with <a className="hover:underline" href="https://github.com/eleekku/eleekku" target="_blank" rel="noopener noreferrer">eleeku</a>, <a className="hover:underline" href="https://github.com/xrierac" target="_blank" rel="noopener noreferrer">xrierac</a>,  <a className="hover:underline" href="https://github.com/codinggolfer" target="_blank" rel="noopener noreferrer">codinggolfer</a> and <a className="hover:underline" href="https://github.com/Deivylex" target="_blank" rel="noopener noreferrer">Deivylex</a>. 
 				The scope was vaguely defined, basically build a web application with Pong. We could choose from a selection of modules based on 
@@ -63,11 +49,11 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				<br/>
 				
 				I have worked further on the project after it's completion, as I wanted to get a better understanding
-				of the frontend so I have rebuilt it with a more retro style.
+				of the frontend so I have rebuilt it with a more retro style, you see screenshots below.
 				<br/>
 				<br/>
 				The new version is deployed on fly and stills run a small microservice network, 
-				I also added storage buckets instead of local strage for user images with Tigris,
+				I also added storage buckets instead of local storage for user images with Tigris,
 				and removed the ELK stack (sorry Xavi) as fly has in built logging and monitoring.
 				<br/>
 				<br/>
@@ -76,14 +62,29 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 
 				</span>
 				<div className="flex flex-col md:flex-row gap-x-10">
-				<PongButton	url="https://github.com/eleekku/ft_transcendence" text="Original Codebase" />
-				<PongButton	url="https://github.com/tcampbel22/transcendence" text="New Codebase" />
-				<PongButton	url="https://transendence.fly.dev/" text="Launch Pong" />
+				<MediumButton	url="https://github.com/eleekku/ft_transcendence" text="Original Codebase" />
+				<MediumButton	url="https://github.com/tcampbel22/transcendence" text="New Codebase" />
+				<MediumButton	url="https://transendence.fly.dev/" text="Launch Pong" />
 				</div>
-				<span className="text-center">***Note*** This app has a cold start, so will take a few mins to boot up</span>
+				
+				<p className="text-xl md:text-left my-8">Here are some comparison screenshots between the old UI and the new one</p>
+				<br/>
+				<br/>
+				<div className="flex flex-col grid grid-cols-2 w-full gap-10 items-center justify-center">
+					<ImageCard image="/screenshots/old_login.png" text="Original login"/>
+					<ImageCard image="/screenshots/login.png" text="New login"/>
+					<ImageCard image="/screenshots/old_register.png" text="Original register"/>
+					<ImageCard image="/screenshots/register.png" text="New register"/>
+					<ImageCard image="/screenshots/old_hub.png" text="Original hub"/>
+					<ImageCard image="/screenshots/hub.png" text="New hub"/>
+					<ImageCard image="/screenshots/old_game.png" text="Original game"/>
+					<ImageCard image="/screenshots/game.png" text="New game"/>
+					<ImageCard image="/screenshots/old_profile.png" text="Original profile"/>
+					<ImageCard image="/screenshots/profile.png" text="New profile"/>
+				
+				</div>
+				
 			</div>
-				
-				
 			<Footer/>
 		</div>
 	)

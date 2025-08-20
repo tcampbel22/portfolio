@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Minishell</title>
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css" />
+    <script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-			font-family: monospace;
-			font-size: xx-large;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-        }
-		#terminal_container {
-			overflow-y: scroll;
-			height: 100%;
-		}
-		#screen_container canvas {
-      		width: 100%; height: 100%; display: block;
-      		image-rendering: pixelated;
-    	}
-        #screen_container {
-            width: 100%;
-            height: auto;
-            position: relative;
-        }
+      /* Simple spinner style */
+      #spinner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 8px solid hsl(0, 0%, 95%);
+        border-top: 8px solid #095689;
+        border-radius: 90%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+        z-index: 10;
+      }
+      @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg);}
+        100% { transform: translate(-50%, -50%) rotate(360deg);}
+      }
+      #terminal { position: relative; }
     </style>
-</head>
-<body>
-    <div id="terminal_container">
-		<div id="screen_container">
-			<div></div>
-			<canvas tabindex="0"></canvas>
-		</div>
-	</div>
-	<!-- <button id="save_state_btn" style="position: absolute; top: 10px; right: 10px; z-index: 100;">Save State</button> -->
-    <script src="/libv86.js"></script>
+  </head>
+  <body>
+    <div id="terminal"></div>
+    <div id="spinner"></div>
     <script>
-        const emulator = new window.V86({
-            wasm_path: "/v86.wasm",
-            screen_container: document.getElementById("screen_container"),
-            screen_dummy: true,
-			memory_size: 512 * 1024 * 1024,
-            vga_memory_size: 8 * 1024 * 1024,
-            network_relay_url: "wss://relay.widgetry.org/",
-			initial_state: {
-				url: "/images/minishell.v86"
-			},
-            autostart: true,
+      const spinner = document.getElementById('spinner');
+      const term = new Terminal({
+        cursorBlink: true,
+        fontSize: 18,
+        fontFamily: 'monospace',
+        theme: { background: '#000000' }
+      });
+      term.open(document.getElementById('terminal'));
+
+      function connectSocket() {
+        spinner.style.display = '';
+        const socket = new WebSocket(`wss://minishell-server.onrender.com/`);
+
+        socket.onopen = () => {
+          spinner.style.display = 'none';
+        };
+
+        socket.onmessage = (event) => {
+          term.write(event.data);
+        };
+
+        term.onData((data) => {
+          socket.send(data);
         });
-		
-		const canvas = document.querySelector("#screen_container canvas");
-		if (canvas) {
-			canvas.tabIndex = 0;
-			canvas.focus();
-			canvas.addEventListener("click", () => canvas.focus());
-		}
-        document.getElementById("save_state_btn").addEventListener("click", () => {
-            if (!emulator) return;
-            emulator.save_state().then(state => {
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(new Blob([state], { type: 'application/octet-stream' }));
-                a.download = 'minishell.v86';
-                a.click();
-            });
-        });
+
+        socket.onerror = () => {
+          spinner.style.display = 'none';
+          term.write('\r\nConnection error. Retrying...\r\n');
+        };
+
+        socket.onclose = () => {
+          spinner.style.display = '';
+          setTimeout(connectSocket, 2000);
+        };
+      }
+
+      connectSocket();
     </script>
-</body>
+  </body>
 </html>
