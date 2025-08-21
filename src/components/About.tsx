@@ -10,16 +10,17 @@ export const About:React.FC = () => {
 				<p className='col-span-3 md:pt-0 px-2 lg:px-0 py-6 md:col-span-2  text-center md:text-left text-md md:text-lg'>
 					Software developer with hands-on experience in full-stack development 
 					and a strong focus on backend engineering. Before transitioning into tech, 
-					I spent over 10 years in hospitality and food-tech operations leading launches, 
-					managing teams, and driving projects in fast-paced startup environments.
-					Now, I bring that same energy and strategic mindset to software development. I'm passionate about 
-					backend architecture, API design, and building clean, well-tested applications. 
+					I spent over 10 years in hospitality and food-tech operations leading restaurant launches, 
+					managing teams, and driving projects in startups, small businesses and larger enterprises.
+					Now, I bring that same energy and strategic mindset to software development, with a background 
+					in managing people and processes, I’m a strong communicator, problem-solver, and collaborator. 
 					<br/>
 					<br/>
-					My current toolbox 
-					includes C, C++, Python, TypeScript, and JavaScript, along with experience in frameworks like React, Fastify, and Flask.
-					With a background in managing people and processes, I’m a strong communicator, problem-solver, and collaborator. 
-		            Check out some of my projects below!
+					I'm currently building projects with Python, Typescript and Javascript, 
+					as well as using frameworks and libraries such as React, Express and FastAPI.
+		            <br/>
+		            <br/>
+					You can find more of my projects by following the links below!
 				</p>
 			</div>
 		</div>

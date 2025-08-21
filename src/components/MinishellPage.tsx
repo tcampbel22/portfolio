@@ -51,7 +51,7 @@ export const MinishellPage: React.FC<DarkProps> = ({ isDark }) => {
 					with the button below.
 				</p>
 				
-				<div>
+				<div className="my-10">
 					<MediumButton text="See codebase" url="https://github.com/tcampbel22/custom_shell_interpreter"/>
 				</div>
 				<BackButton link="/" text="Go to home page" isDark={isDark}/>

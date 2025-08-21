@@ -24,7 +24,7 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				project and check out screenshots and the codebase.
 				
 				<MediumButton	url="/files/loading.html" text="Launch Pong" />
-				<span className="text-center">***Note*** This app has a cold start, so will take a few mins to boot up</span>
+				<span className="text-center">***Note*** This app has a cold start, so will take a bit to boot up</span>
 			
 			<span className="whitespace-pre-line mt-6 px-4 md:px-0 py-8 text-center md:text-left">
 			The last project in the 42 curriculum, this project is to build a online web application with the classic Pong game.
@@ -57,8 +57,6 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				<br/>
 				<br/>
 				Below you can check out the original project code, my new version or launch the app
-
-
 				</span>
 				<div className="flex flex-col md:flex-row gap-x-10">
 				<MediumButton	url="https://github.com/eleekku/ft_transcendence" text="Original Codebase" />
@@ -69,7 +67,7 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				<p className="text-xl md:text-left my-8">Here are some comparison screenshots between the old UI and the new one</p>
 				<br/>
 				<br/>
-				<div className="flex flex-col grid grid-cols-2 w-full gap-10 items-center justify-center">
+				<div className="flex flex-col grid grid-cols-2 w-full gap-2 md:gap-10 items-center justify-center mb-8">
 					<ImageCard image="/screenshots/old_login.png" text="Original login"/>
 					<ImageCard image="/screenshots/login.png" text="New login"/>
 					<ImageCard image="/screenshots/old_register.png" text="Original register"/>
@@ -82,7 +80,7 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 					<ImageCard image="/screenshots/profile.png" text="New profile"/>
 				
 				</div>
-				
+				<BackButton link="/" text="Go to home page" isDark={isDark}/>
 			</div>
 			<Footer/>
 		</div>

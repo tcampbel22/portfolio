@@ -5,7 +5,7 @@ export const shellInfo = {
 	moduleList: {
 		text: [
 			"Display a prompt when waiting for a new command and have a working history",
-			"Single(\') and double (\") quotes",
+			"Single(') and double (\") quotes",
 			"Redirections -> input <, output >, heredoc <<, append >>",
 			"Pipes (|)",
 			"Environment variables & $? (Last exit status)",
