@@ -9,7 +9,7 @@ import type { DarkProps } from "../types/types";
 
 export const HomePage:React.FC<DarkProps> = ({ isDark }) => {
 	return (
-		<div className="md:max-w-screen-xl mx-auto">
+		<div className="md:max-w-screen-xl h-full mx-auto">
 			<Header isDark={isDark}/>
 			<LineBreak />
 			<About/>

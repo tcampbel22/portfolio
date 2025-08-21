@@ -10,10 +10,10 @@ import { MinishellPage } from "./MinishellPage";
 export const AppRoutes:React.FC<DarkProps> = ({ isDark }) => {
 	return (
 		<Routes>
-			<Route path="/resume" element={<Resume />}/>
+			<Route path="/resume" element={<Resume isDark={isDark}/>}/>
 			<Route path="/projects" element={<AllProjects isDark={isDark}/>}/>
 			<Route path="/pong" element={<PongPage isDark={isDark}/>}/>
-			<Route path="/shell" element={<MinishellPage isDark={isDark}/>}/>
+			<Route path="/minishell" element={<MinishellPage isDark={isDark}/>}/>
 			<Route path="/" element={<HomePage isDark={isDark}/>}/>
 		</Routes>
 	);

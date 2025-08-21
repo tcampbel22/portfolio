@@ -4,7 +4,6 @@ import { LineBreak, BackButton, MediumButton, ImageCard } from "./Utils"
 import { pongInfo } from "../data/pongInfo"
 import { Footer } from "./Footer"
 import type { DarkProps } from "../types/types"
-import { ProjectCard } from "./Project"
 
 
 export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
@@ -18,13 +17,13 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 			</div>
 			<LineBreak />
 			<div className="flex flex-col justify-center items-center text-xl md:text-left text-center">
-				<img className="m-10" src="pong.gif"></img>
+				<img className="m-10" src="/gifs/pong.gif"></img>
 				If you want to check the project straight away just click the button below.
 				In this version you can create a profile, add/delete friends, play in a tournament or 1v1.
 				The game is designed to be played between 2 people on the same keyboard. Scroll down to read more about the 
 				project and check out screenshots and the codebase.
 				
-				<MediumButton	url="https://transendence.fly.dev/" text="Launch Pong" />
+				<MediumButton	url="/files/loading.html" text="Launch Pong" />
 				<span className="text-center">***Note*** This app has a cold start, so will take a few mins to boot up</span>
 			
 			<span className="whitespace-pre-line mt-6 px-4 md:px-0 py-8 text-center md:text-left">
@@ -64,7 +63,7 @@ export const PongPage:React.FC<DarkProps> = ({ isDark }) => {
 				<div className="flex flex-col md:flex-row gap-x-10">
 				<MediumButton	url="https://github.com/eleekku/ft_transcendence" text="Original Codebase" />
 				<MediumButton	url="https://github.com/tcampbel22/transcendence" text="New Codebase" />
-				<MediumButton	url="https://transendence.fly.dev/" text="Launch Pong" />
+				<MediumButton	url="/files/loading.html" text="Launch Pong" />
 				</div>
 				
 				<p className="text-xl md:text-left my-8">Here are some comparison screenshots between the old UI and the new one</p>

@@ -19,7 +19,7 @@ const App:React.FC = () => {
 			};
 		}, []);
 	return (
-    <div className="w-full bg-white dark:bg-gray-950 font-mono">
+    <div className="w-full  bg-white bg-contain dark:bg-gray-950 dark:text-gray-100 font-mono">
       <ScrollToTop />
 	  <AppRoutes isDark={darkMode}/>
     </div>

@@ -11,7 +11,7 @@ const LineBreak:React.FC = () => {
 
 const NavigateButton:React.FC<NavigateButtonProps> = ({ link, text }) => {
 	return (
-		<Link to={link} className='text-center md:text-xl dark:text-white p-7 rounded-sm border-3 dark:bg-gray-900 dark:hover:bg-gray-600 transform hover:scale-110 transition-all duration-300 ease-in-out'>
+		<Link to={link} className='text-center md:text-xl dark:text-white px-9 py-7 rounded-sm border-3 dark:bg-gray-900 dark:hover:bg-gray-600 transform hover:scale-110 transition-all duration-300 ease-in-out'>
 			{text}
 		</Link>
 	);

@@ -1,15 +1,14 @@
 import React from "react";
 import { HeaderCenter, HeaderMini } from "./HeaderText";
-import { Link } from "react-router-dom";
 import { PhoneIcon, EnvelopeIcon, PaperPlaneTiltIcon } from "@phosphor-icons/react"
 import type { DarkProps } from "../types/types";
-import { MediumButton } from "./Utils";
+import { NavigateButton } from "./Utils";
 
 export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 	return (
-		<div className="py-8">
+		<div className="pt-5 md:py-8">
 			<HeaderCenter text="Contact" />
-			<div className="flex flex-col md:flex-row items-center md:justify-between">
+			<div className="flex flex-col md:flex-row items-center md:justify-between pt-6 md:pt-0">
 				<div className="flex flex-col">
 					<div className="flex justify-start items-center space-x-8 py-2">
 						<PhoneIcon size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
@@ -34,8 +33,8 @@ export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 			
 				</div>
 			</div>
-			<div className="flex justify-center items-center pt-8">
-				<MediumButton url="/resume" text="Read CV"/>
+			<div className="flex justify-center items-center md:mt-6 mt-10">
+				<NavigateButton link="/resume" text="Read CV"/>
 			</div>
 		</div>
 	);

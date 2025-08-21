@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/images/pong_12.svg"/>
+    <title>Loading...</title>
+	<script>
+		const urls = [
+			'https://tc-user-service.fly.dev/api/health', 
+			'https://tc-game-service.fly.dev/api/health',
+		];
+
+		setInterval(() => {
+			Promise.all(
+				urls.map(url =>
+					fetch(url)
+						.then(res => {
+							if (res.status === 200 || res.status === 401) {
+								return { url, success: true };
+							}
+							return { url, success: false };
+						})
+						.catch(() => ({ url, success: false }))
+				)
+			).then(results => {
+				const successful = results.find(result => result.success);
+				if (successful) {
+					window.location.href = 'https://transendence.fly.dev/';
+				} else {
+					console.error("Failed to reach all services");
+				}
+			});
+		}, 3000);
+	</script>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 1;
+			font-family: monospace;
+			background-color: #111827;
+			color: #fde68a;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: xx-large;
+			text-align: center;
+		}
+		img {
+			height: 120%;
+			width: 120%;
+			object-fit: contain;
+			margin-bottom: 50px;
+		}
+		span {
+			padding: 4px;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			row-gap: 20px;
+		}
+		.loader {
+			width: 50px;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			border: 8px solid #0000;
+			border-right-color: #fde68a;
+			position: relative;
+			animation: l24 1s infinite linear;
+			margin-top: 10px;
+		}
+		.loader:before,
+		.loader:after {
+			content: "";
+			position: absolute;
+			inset: -8px;
+			border-radius: 50%;
+			border: inherit;
+			animation: inherit;
+			animation-duration: 2s;
+		}
+		.loader:after {
+			animation-duration: 4s;
+		}
+		@keyframes l24 {
+			100% {transform: rotate(1turn)}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="/images/pong_12.svg" alt="Loading..."/>
+		<span>Please wait for the servers to spin up...</span>
+		<div class="loader"></div>
+	</div>
+   
+</body>
+</html>

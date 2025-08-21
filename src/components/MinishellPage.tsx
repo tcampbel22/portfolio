@@ -29,7 +29,7 @@ export const MinishellPage: React.FC<DarkProps> = ({ isDark }) => {
 					<span className="text-center">*** This program has a cold start so may take a bit to warm up ***</span>
 				<div className="mt-4 mb-3 flex md:flex-col justify-center items-center">
 					<iframe
-							src="/shell.html"
+							src="/files/shell.html"
 							className="rounded-sm w-full md:w-4xl min-h-80 md:min-h-130 bg-black border-4 border-gray-100 text-gray-100"
 							title="minishell"
 						></iframe>
