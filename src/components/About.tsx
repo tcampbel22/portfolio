@@ -8,8 +8,8 @@ export const About:React.FC = () => {
 				<img src={timImg} className='md:mt-1 col-span-3 md:row-span-3 md:col-span-1 w-60 h-60 md:w-92 md:h-92 rounded-lg'/>
 				<h2 className='pt-6 md:pt-0 col-span-3 md:col-span-1 row-span-1 md:text-3xl font-bold pb-2'>About Me</h2>
 				<p className='col-span-3 md:pt-0 px-2 lg:px-0 py-6 md:col-span-2  text-center md:text-left text-md md:text-lg'>
-					Software developer with hands-on experience in full-stack development 
-					and a strong focus on backend engineering. Before transitioning into tech, 
+					Software developer with hands-on experience in full-stack development, 
+					systems programming and automated testing. Before transitioning into tech, 
 					I spent over 10 years in hospitality and food-tech operations leading restaurant launches, 
 					managing teams, and driving projects in startups, small businesses and larger enterprises.
 					Now, I bring that same energy and strategic mindset to software development, with a background 

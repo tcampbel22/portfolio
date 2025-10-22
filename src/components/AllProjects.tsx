@@ -21,7 +21,9 @@ export const AllProjects:React.FC<DarkProps> = ({ isDark })  => {
 			</p>
 			<LineBreak />
 			<div className='grid grid-cols-1 lg:grid-cols-3 gap-10 md:mt-20 mx-5 p-5 md:p-0 md:mx-auto'>
-				{ProjectList.map(p => { 
+				{ProjectList.map((p, idx)=> { 
+					if (idx < 2)
+						return <Project key={p.name} projectName={p.name} stack={p.stack} link={p.link} image={p.image} isHero={true}/>
 					return <Project key={p.name} projectName={p.name} stack={p.stack} link={p.link} image={p.image}/>
 				})}
 			</div>

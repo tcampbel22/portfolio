@@ -16,7 +16,7 @@ export const Contact:React.FC<DarkProps> = ({ isDark }) => {
 					</div>
 					<div className="flex justify-start items-center space-x-8 py-2">
 						<EnvelopeIcon size={64} color={isDark ? '#f6f5f4' : '#000000'}/>
-						<HeaderMini text="tcampbel22@gmail.com"/>
+						<HeaderMini text="mail@timcampbell.xyz"/>
 					</div>
 					<div className="flex justify-start items-center space-x-8 py-2">
 						<PaperPlaneTiltIcon size={64} alt="Telegram" color={isDark ? '#f6f5f4' : '#000000'}/>
