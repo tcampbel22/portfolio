@@ -9,7 +9,7 @@ export const Resume:React.FC<DarkProps> = ({ isDark }) => {
 			<div className="flex flex-col items-center gap-y-6 pt-10">
 				<BackButton link="/" isDark={isDark}/>
 				<div className="md:w-5xl w-sm md:h-360 h-120 p-4">
-					<iframe src="/files/cv.pdf" width="100%" height="100%"></iframe>
+					<iframe src="/files/Tim-Campbell-CV.pdf" width="100%" height="100%"></iframe>
 				</div>
 				<BackButton link="/" isDark={isDark}/>
 			</div>
